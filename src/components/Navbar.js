@@ -1,44 +1,37 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom'
+import "./Navbar.css"
 
 export default function Navbar() {
-    const options = [
-        {
-            link: "/",
-            name: "home"
-        },
-        {
-            link: "/Restaurants",
-            name: "Restaurants"
-        },
-        {
-            link: "/contact",
-            name: "contact"
-        },
-        {
-            link: "/about",
-            name: "about"
-        },
-    ]
-    return (
-        <div>
-            <ul>
-                {options.map((item, index) => {
-                    return (
-                        <li key={index}>
-                            <NavLink to={item.link}>
-                                {item.name}
-                            </NavLink>
-                        </li>
-                    );
-                }
-                )}
-                <li >
-                    <NavLink to="/cart">
-                        cart
-                    </NavLink>
-                </li>
-            </ul>
-        </div >
-    );
+  return (
+    <nav className="navbar">
+      <div className="header">
+        <div className="logo">
+          {<h4>logo</h4>}
+        </div>
+        <div className="nav-elements">
+          <ul>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/Restaurants">Restaurants</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact</NavLink>
+            </li>
+            {/* <li>
+              <NavLink to="/cart">{<h1>{0}</h1>}</NavLink>
+            </li> */}
+            {/* <li>
+              <NavLink to="/signup">signup</NavLink>
+            </li> */}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  )
 }

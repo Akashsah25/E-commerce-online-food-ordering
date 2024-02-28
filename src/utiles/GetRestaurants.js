@@ -14,9 +14,9 @@ export default function GetRestaurants() {
 
     const fetchRestaurantsdata = async () => {
         try {
-            // let RestaurantsAPI = `https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&page_type=DESKTOP_WEB_LISTING`;
+            let RestaurantsAPI = `https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&page_type=DESKTOP_WEB_LISTING`;
             
-            let RestaurantsAPI =`https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&is-seo-homepage-enabled=true`;
+            // let RestaurantsAPI =`https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&is-seo-homepage-enabled=true`;
             
             const response = await fetch(RestaurantsAPI);
             const data = await response.json();
