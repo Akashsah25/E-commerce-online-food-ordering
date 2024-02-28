@@ -2,42 +2,43 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
-   const options=[
+    const options = [
         {
-            link:"/",
-            name:"home"
+            link: "/",
+            name: "home"
         },
         {
-            link:"/Restaurants",
-            name:"Restaurants"
+            link: "/Restaurants",
+            name: "Restaurants"
         },
         {
-            link:"/contact",
-            name:"contact"
+            link: "/contact",
+            name: "contact"
         },
         {
-            link:"/about",
-            name:"about"
+            link: "/about",
+            name: "about"
         },
     ]
-  return (
-    <div>
-        <ul>
-           {options.map((item,index)=>{
-                return(
-                <li key={index}>
-                    <NavLink to={item.link}>
-                     {item.name}
+    return (
+        <div>
+            <ul>
+                {options.map((item, index) => {
+                    return (
+                        <li key={index}>
+                            <NavLink to={item.link}>
+                                {item.name}
+                            </NavLink>
+                        </li>
+                    );
+                }
+                )}
+                <li >
+                    <NavLink to="/cart">
+                        cart
                     </NavLink>
                 </li>
-                );
-            })}
-            <li>
-                <NavLink to="/cart">
-                    cart
-                </NavLink>
-            </li>
-        </ul>
-    </div>
-  );
+            </ul>
+        </div >
+    );
 }

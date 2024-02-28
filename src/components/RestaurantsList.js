@@ -17,6 +17,7 @@ export default function RestaurantsList() {
   const restaurantData = GetRestaurants();
   const { restaurants } = restaurantData;
 
+
   function searchRestaurants() {
     dispatch(coordinateFetch(city));
     setcity("")

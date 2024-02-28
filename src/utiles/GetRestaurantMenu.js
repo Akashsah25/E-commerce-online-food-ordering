@@ -12,7 +12,9 @@ export default function GetRestaurantMenu(id) {
     console.log("coordinates",longitude,latitude)
     const fetchRestaurantMenu = async () => {
         try {
-            const RestaurantMenuAPI = `https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${latitude}&lng=${longitude}&restaurantId=${id}&submitAction=ENTER`;
+            // const RestaurantMenuAPI = `https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${latitude}&lng=${longitude}&restaurantId=${id}&submitAction=ENTER`;
+            const RestaurantMenuAPI = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${latitude}&lng=${longitude}&restaurantId=${id}&submitAction=ENTER`;
+
 
             const response = await fetch(RestaurantMenuAPI);
             const data = await response.json()

@@ -27,6 +27,7 @@ export default function RestaurantsCard({ restaurant }) {
                         <div key={id} onClick={() => openRestaurantMenu(id)}>
                             <h1>{name}</h1>
                             <h2>{avgRating}</h2>
+                            <h3>{cuisines}</h3>
                         </div>
                     );
 
